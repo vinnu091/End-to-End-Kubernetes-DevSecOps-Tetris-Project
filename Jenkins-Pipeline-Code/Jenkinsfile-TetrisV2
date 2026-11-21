@@ -72,7 +72,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
-                        sh 'docker tag tetrisv1 vinnvuvyshnavi/tetrisv1:${BUILD_NUMBER}'
+                        sh 'docker tag tetrisv1 vinnuvyshnavi/tetrisv1:${BUILD_NUMBER}'
                         sh 'docker push vinnuvyshnavi/tetrisv1:${BUILD_NUMBER}'
                     }
                 }
